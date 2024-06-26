@@ -14,6 +14,7 @@ Additionally we had to download all the requested dependencies for all the add-o
 To initialize a project we used:  `npm init react-app ./ PROJECT NAME`.
 From there all the configurations are automated, and the basic project structure is built.
 
+### Initialize Project
 To start the application from the client side we go inside the directory _package.json_ is located and we use the `npm start` command.
 This runs the app in the development mode.
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
