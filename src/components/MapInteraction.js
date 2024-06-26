@@ -93,7 +93,7 @@ const MapInteraction = ({setLocations}) => {
 
   return (
     // My API-KEY
-    <LoadScript googleMapsApiKey="AIzaSyCv3MQCBBotp_djJT9hAD4KsMfBMqQUyLY&loading=async" libraries={libraries}>
+    <LoadScript googleMapsApiKey="&loading=async" libraries={libraries}>
       <div style={{ display: 'flex', flexDirection: 'column', height: '70vh' }}>
         <StandaloneSearchBox onLoad={onSearchBoxLoad} onPlacesChanged={onPlacesChanged}>
           <input
