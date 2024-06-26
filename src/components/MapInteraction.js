@@ -15,11 +15,13 @@ const MapInteraction = ({setLocations}) => {
     width: "100%"
   };
 
+  // Center of Volos
   const center = {
     lng: 22.950,
     lat: 39.366
   };
 
+  // Get text
   const onSearchBoxLoad = (ref) => {
     searchBoxRef.current = ref;
   };
@@ -47,6 +49,7 @@ const MapInteraction = ({setLocations}) => {
    
   }, [markers, setLocations]);
 
+  // Add marker on the map on click, update both states
   const onMapClick = (e) => {
     setMarkers((current) => [
       ...current,
@@ -71,8 +74,8 @@ const MapInteraction = ({setLocations}) => {
     }
   }, [onPlacesChanged]);
  
- 
 
+  // Listeners on events
   useEffect(() => {
     const inputElement = inputRef.current;
     if (inputElement) {
@@ -86,13 +89,14 @@ const MapInteraction = ({setLocations}) => {
     };
   }, [onKeyPress]);
 
+
   const onLoad = useCallback((map) => { 
     mapRef.current = map;
   }, []);
 
 
   return (
-    // My API-KEY
+    // Adjust API key and add async for intended renders
     <LoadScript googleMapsApiKey="&loading=async" libraries={libraries}>
       <div style={{ display: 'flex', flexDirection: 'column', height: '70vh' }}>
         <StandaloneSearchBox onLoad={onSearchBoxLoad} onPlacesChanged={onPlacesChanged}>
